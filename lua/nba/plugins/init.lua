@@ -101,5 +101,35 @@ return {
     config = function()
       vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
     end
+  },
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+      require('lualine').setup({})
+    end
+  },
+  {
+    "hrsh7th/cmp-cmdline",
+    config = function ()
+      local cmp = require 'cmp'
+      cmp.setup.cmdline({'/','?'},{
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          {name = 'buffer'}
+        }
+      })
+      cmp.setup.cmdline(":",{
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({
+          {name = 'path'}
+        },{
+            {name = 'cmdline'}
+          })
+      })
+    end
+  },
+  {
+    "hrsh7th/cmp-buffer",
   }
 }
