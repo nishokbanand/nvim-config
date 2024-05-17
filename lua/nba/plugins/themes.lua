@@ -1,4 +1,5 @@
 return {
+  -- "rebelot/kanagawa.nvim",
   "catppuccin/nvim",
   priority = 1000,
   init = function()

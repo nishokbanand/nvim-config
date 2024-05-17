@@ -5,8 +5,8 @@ return {
     local conform = require("conform")
     conform.setup({
       formatters_by_ft = {
-        typescript = { "prettierd" },
-        javascript = { "prettierd" },
+        typescript = { "prettier" },
+        javascript = { "prettier" },
       },
       format_on_save = {
         lsp_fallback = true,
