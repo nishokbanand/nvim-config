@@ -37,8 +37,6 @@ return {
         vim.keymap.set('n', '<leader>gp', gitsigns.preview_hunk, { desc = '[P]review [H]unk' })
         vim.keymap.set('n', '<leader>gb', gitsigns.blame_line, { desc = '[B]lame [L]ine' })
         vim.keymap.set('n', '<leader>gd', gitsigns.diffthis, { desc = '[D]iff' })
-        vim.keymap.set('n', '<leader>gu', gitsigns.undo_stage_hunk, { desc = '[U]ndo [H]unk' })
-        vim.keymap.set('n', '<leader>gu', gitsigns.undo_stage_hunk, { desc = '[U]ndo [H]unk' })
       end
     },
   },
